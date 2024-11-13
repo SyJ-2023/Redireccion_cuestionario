@@ -10,14 +10,22 @@
         function redirectToRandomQuiz() {
             // Lista de enlaces a los cuestionarios
             const quizzes = [
-                "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAf45xHtUNVRQR1k1VUdYSEVXRlNCUlRXODlXME5VTy4u",  // Cambia a la URL del primer cuestionario
-                "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAf45xHtUOTQzWjZCRk05Mzg2NTRHQ0lLMVJWU0hURy4u",  // Cambia a la URL del segundo cuestionario
-                "https://formulario3.com"   // Cambia a la URL del tercer cuestionario
+                "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAf45xHtUNVRQR1k1VUdYSEVXRlNCUlRXODlXME5VTy4u",  // Primer cuestionario
+                "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAf45xHtUOTQzWjZCRk05Mzg2NTRHQ0lLMVJWU0hURy4u",  // Segundo cuestionario
+                "https://example.com/formulario3"  // Tercer cuestionario (cambia esto al enlace correcto)
             ];
+            
             // Selecciona un cuestionario aleatorio
             const randomIndex = Math.floor(Math.random() * quizzes.length);
-            window.location.href = quizzes[randomIndex];
+            const selectedQuiz = quizzes[randomIndex];
+            
+            // Muestra en la consola a cuál enlace está redirigiendo
+            console.log("Redirigiendo a: ", selectedQuiz);
+
+            // Redirecciona al cuestionario seleccionado
+            window.location.href = selectedQuiz;
         }
+        
         // Ejecuta la función al cargar la página
         window.onload = redirectToRandomQuiz;
     </script>
