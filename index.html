@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección Aleatoria</title>
+    <script>
+        // Función para redirigir aleatoriamente a uno de los 3 cuestionarios
+        function redirectToRandomQuiz() {
+            // Lista de enlaces a los cuestionarios
+            const quizzes = [
+                "https://formulario1.com",  // Cambia a la URL del primer cuestionario
+                "https://formulario2.com",  // Cambia a la URL del segundo cuestionario
+                "https://formulario3.com"   // Cambia a la URL del tercer cuestionario
+            ];
+            // Selecciona un cuestionario aleatorio
+            const randomIndex = Math.floor(Math.random() * quizzes.length);
+            window.location.href = quizzes[randomIndex];
+        }
+        // Ejecuta la función al cargar la página
+        window.onload = redirectToRandomQuiz;
+    </script>
+</head>
+<body>
+    <p>Redirigiendo al cuestionario...</p>
+</body>
+</html>
